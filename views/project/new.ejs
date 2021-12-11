@@ -1,0 +1,54 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projecture</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/flexslider.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<div>
+    <section class="banner1" style="height:10px">
+        <header id="header">
+            <div class="header-content">
+                <p class='logo'>Projecture</p>
+                <!-- <nav class="navigation" role="navigation">
+                    <ul class="primary-nav">
+                    </ul>
+                </nav> -->
+                <!-- <a href="#" class="nav-toggle">Menu<span></span></a> -->
+            </div><!-- header content -->
+        </header><!-- header -->
+    
+   
+    </section><!-- banner -->
+    <form action="/projects/new"method="POST"class="form-signin validate-form">       
+        <h2 class="form-signin-heading">Post Project</h2>
+        <input type="text" class="form-control" name="project[name]" placeholder="Project Name" required>   
+        <input type="number" class="form-control" name="project[people]" placeholder="No.of People" min="0" max="8" required>  
+        <input type="text" class="form-control" name="project[domain]" placeholder="Domain" required>   
+        <textarea class="form-control" name="project[description]" placeholder="Description" rows="10" cols="10"></textarea>
+    
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Post</button>   
+      </form>
+  </div>
+  <script src="/js/validateForms.js"></script>
+</body>

@@ -1,9 +1,38 @@
-<% layout('layouts/boilerplate')%>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projecture</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/flexslider.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap');
+</style>
+</head>
+<body>
 <div>
     <section class="banner1" style="height:10px">
         <header id="header">
             <div class="header-content">
-                <p class='logo'>Projecture</p>
+                <strong><span style="font-size: 35px; color: white; font-family: 'Corinthia', cursive;" >Projecture</span><strong>
                 <!-- <nav class="navigation" role="navigation">
                     <ul class="primary-nav">
                     </ul>
@@ -11,20 +40,82 @@
                 <!-- <a href="#" class="nav-toggle">Menu<span></span></a> -->
             </div><!-- header content -->
         </header><!-- header -->
-    
+    </section>
    
-    </section><!-- banner -->
-    <form class="form-signin">       
-        <h2 class="form-signin-heading">Please Register</h2>
-        <input type="password" class="form-control" name="username" placeholder="Full Name" required=""/>   
-        <input type="password" class="form-control" name="password" placeholder="Register as:" required=""/>   
-        <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-        <input type="password" class="form-control" name="password" placeholder="Re-Type Password" required=""/>     
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>   
-      </form>
-  </div>
+<form action="/register" method="POST"class="form-signin validate-form">       
+    <h2 class="form-signin-heading">Please Register</h2>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" name="name"  id="Name" required> 
+    </div>
+    <div class="mb-3"><label for="usename" class="form-label">Username</label>
+        <input type="text" class="form-control" name="username"  id="usename" required> 
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email </label>
+        <input type="email" class="form-control" name="email"  id="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="password" required>
+    </div>
+    <div class="mb-3"><label for="phone" class="form-label">Phone No.</label>
+        <input type="tel" class="form-control"  name="phone" id="phone" >
+    </div>
+    <div class="mb-3">
+        <label for="dob" class="form-label">DOB</label>
+        <input type="date" class="form-control" name="dob"  id="dob" required>
+    </div>
 
+    <div class="mb-3">
+        <label for="skills" class="form-label">Skills</label>
+        <textarea class="form-control" name="skills" id="skills" required></textarea>
+    </div>
+<div class="mb-3"><h5>Register as:</h5>
+    <label class="radio-inline">
+      <input type="radio" name="student">Student
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="mentor">Mentor
+    </label>
+</div>
+    <div class="mb-3">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>   
+    </div>
+     
+    
+  </form>
+</div>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h5>Location</h5>
+                    <p>Thapar University<br>Patiala, Punjab</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h5>Share with Love</h5>
+                    <ul class="footer-share">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/kamal_chaneman"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/kamalchaneman"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h5>About Projecture</h5>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- footer top -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="col-md-12">
+                <p>Copyright © 2021 Projecture. All Rights Reserved<br>Made with <i class="fa fa-heart pulse"></i> by <a href="">Aman Srivastava</a></p>
+            </div>
+        </div>
+    </div>
+  </footer><!-- footer -->
+  </body>
